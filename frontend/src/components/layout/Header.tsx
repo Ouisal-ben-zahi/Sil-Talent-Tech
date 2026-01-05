@@ -66,23 +66,25 @@ const HeaderComponent = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Déterminer si un utilisateur (candidat ou admin) est connecté
-  useEffect(() => {
+  // Fonction pour vérifier et mettre à jour l'état d'authentification
+  const checkAuthStatus = useCallback(() => {
     if (typeof window === 'undefined') return
 
-    // Vérifier si le token est valide (non expiré)
+    // Vérifier si le token est valide (non expiré) au chargement
     const token = getValidToken()
     const authenticated = isAuthenticated()
-    setIsLoggedIn(authenticated)
-
-    // Si le token est expiré, nettoyer les données
-    if (!authenticated && token === null) {
-      // Le token a été supprimé par getValidToken() s'il était expiré
+    
+    // Si aucun token valide n'existe, afficher uniquement "Se connecter"
+    if (!authenticated || token === null) {
+      setIsLoggedIn(false)
       setUserType(null)
       setUserName(null)
       setUserProfilePicture(null)
       return
     }
+
+    // Token valide, continuer avec la logique normale
+    setIsLoggedIn(true)
 
     // Déterminer le type d'utilisateur et récupérer les informations
     const storedCandidateName = localStorage.getItem('candidateName')
@@ -118,8 +120,34 @@ const HeaderComponent = () => {
       setUserName(null)
       setUserProfilePicture(null)
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname])
+
+  // Vérifier l'authentification au chargement initial et lors du changement de route
+  useEffect(() => {
+    checkAuthStatus()
+  }, [checkAuthStatus])
+
+  // Écouter les changements de localStorage pour détecter les déconnexions
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    const handleStorageChange = () => {
+      checkAuthStatus()
+    }
+
+    // Écouter les changements de localStorage (déconnexion depuis un autre onglet)
+    window.addEventListener('storage', handleStorageChange)
+    
+    // Vérifier périodiquement si le token est toujours valide (toutes les 30 secondes)
+    const interval = setInterval(() => {
+      checkAuthStatus()
+    }, 30000)
+
+    return () => {
+      window.removeEventListener('storage', handleStorageChange)
+      clearInterval(interval)
+    }
+  }, [checkAuthStatus])
 
   const navLinks = [
     { href: '/', label: lang === 'FR' ? 'Accueil' : 'Home' },

@@ -45,15 +45,16 @@ export function useSessionManager() {
 
     // Gérer la fermeture de l'onglet/navigateur
     const handleBeforeUnload = () => {
-      // Ne pas nettoyer ici car beforeunload peut être annulé
-      // On vérifiera au prochain chargement
+      // Supprimer le token lors de la fermeture
+      clearAuthData()
     }
 
     // Gérer la mise en veille/réveil de l'ordinateur
     const handleVisibilityChange = () => {
       if (document.hidden) {
         // Page cachée (onglet inactif, ordinateur en veille)
-        // On ne fait rien ici, on vérifiera au retour
+        // Supprimer le token immédiatement
+        clearAuthData()
       } else {
         // Page visible à nouveau
         // Vérifier si le token est toujours valide
@@ -63,21 +64,21 @@ export function useSessionManager() {
       }
     }
 
-    // Gérer la fermeture de la session (pageunload)
-    const handlePageUnload = () => {
-      // Marquer que la session se termine
-      sessionStorage.removeItem('sessionActive')
+    // Gérer la fermeture de la session (pagehide - plus fiable que beforeunload)
+    const handlePageHide = () => {
+      // Supprimer le token lors de la fermeture de l'onglet/navigateur
+      clearAuthData()
     }
 
     // Ajouter les écouteurs d'événements
     window.addEventListener('beforeunload', handleBeforeUnload)
-    window.addEventListener('pagehide', handlePageUnload)
+    window.addEventListener('pagehide', handlePageHide)
     document.addEventListener('visibilitychange', handleVisibilityChange)
 
     // Nettoyer les écouteurs au démontage
     return () => {
       window.removeEventListener('beforeunload', handleBeforeUnload)
-      window.removeEventListener('pagehide', handlePageUnload)
+      window.removeEventListener('pagehide', handlePageHide)
       document.removeEventListener('visibilitychange', handleVisibilityChange)
     }
   }, [router])

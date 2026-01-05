@@ -1,0 +1,346 @@
+{
+  "pages": {
+    "accueil": {
+      "title": "Page d'accueil - Sil Talents Tech",
+      "sections": [
+        {
+          "type": "hero",
+          "title": "Votre croissance technologique mérite les meilleurs talents.",
+          "description": "Nos experts en recrutement IT, cybersécurité et intelligence artificielle vous accompagnent pour bâtir des systèmes robustes, innovants et évolutifs. Disponibles 24 h/24 - 7 j/7.",
+          "services": [
+            "Cybersécurité",
+            "Intelligence Artificielle",
+            "Réseaux & Télécom",
+            "Conseil & Expertise IT"
+          ]
+        },
+        {
+          "type": "servicesPreview",
+          "title": "Nos expertises au service de votre performance digitale",
+          "description": "SIL TALENTS TECH vous propose une offre complète, combinant recrutement IT, cybersécurité, intelligence artificielle, services numériques et accompagnement managérial. Nous intervenons avec précision et agilité pour accélérer vos projets stratégiques.",
+          "services": [
+            {
+              "title": "Agence de recrutement IT",
+              "description": "Accélérez vos recrutements avec des profils techniques préqualifiés. Placements en CDI, freelance ou mission."
+            },
+            {
+              "title": "Coaching en management",
+              "description": "Accompagnement des leaders IT & tech pour piloter l'innovation, gérer la croissance numérique."
+            },
+            {
+              "title": "Intelligence Artificielle",
+              "description": "Conseil en stratégie IA, développement de modèles sur mesure, intégration et automatisation intelligente."
+            },
+            {
+              "title": "Cybersécurité",
+              "description": "Audit, conformité RGPD/ISO, pentesting, SOC externalisé et réponse à incident 24/7."
+            }
+          ]
+        },
+        {
+          "type": "whySil",
+          "title": "Pourquoi Sil Talents Tech ?",
+          "subtitle": "Une approche humaine, une maîtrise technologique",
+          "description": "Nous sommes plus qu'un prestataire : un véritable partenaire stratégique. Grâce à notre double expertise en RH et en tech, nous comprenons vos enjeux métiers, vos contraintes opérationnelles et votre besoin de fiabilité.",
+          "points": [
+            {
+              "title": "Expertise doublée :",
+              "subtitle": "humaine & technologique",
+              "description": "Nous combinons les compétences d'un cabinet de recrutement spécialisé avec celles d'une société de services numériques. Recruter, conseiller, sécuriser, automatiser."
+            },
+            {
+              "title": "Réactivité",
+              "subtitle": "opérationnelle",
+              "description": "Grâce à notre vivier de talents qualifiés et à notre organisation agile, nous sommes capables de proposer des profils en 48h."
+            },
+            {
+              "title": "Accompagnement",
+              "subtitle": "sur mesure",
+              "description": "Chaque client est unique. Nos solutions sont personnalisées selon votre secteur, vos enjeux et vos équipes. Nos consultants adaptent leur approche avec transparence et agilité."
+            },
+            {
+              "title": "Culture de l'exigence",
+              "subtitle": "et du résultat",
+              "description": "Nos consultants sont sélectionnés pour leur technicité, leur rigueur et leur sens du service. Chaque mission est pilotée pour garantir performance, qualité et retour sur investissement."
+            }
+          ]
+        }
+      ]
+    },
+    "aPropos": {
+      "title": "À propos de Sil Talents Tech",
+      "description": "Un cabinet de recrutement spécialisé qui transforme la façon dont les entreprises trouvent leurs talents technologiques. Nous allions expertise technique et approche humaine pour construire des équipes performantes.",
+      "valeurs": [
+        {
+          "title": "Excellence",
+          "description": "Nous visons l'excellence dans chaque recrutement, en garantissant la meilleure adéquation entre talents et entreprises."
+        },
+        {
+          "title": "Proximité",
+          "description": "Un accompagnement personnalisé et humain, avec un suivi continu tout au long du processus de recrutement."
+        },
+        {
+          "title": "Expertise",
+          "description": "Une connaissance approfondie des métiers tech et des enjeux du marché pour un conseil avisé et stratégique."
+        },
+        {
+          "title": "Engagement",
+          "description": "Un engagement fort envers nos clients et nos candidats pour créer des relations durables et fructueuses."
+        }
+      ],
+      "forces": [
+        {
+          "title": "Croissance rapide",
+          "description": "Nous accompagnons les entreprises en phase de croissance qui ont besoin de talents tech rapidement."
+        },
+        {
+          "title": "Portée internationale",
+          "description": "Notre réseau s'étend au-delà des frontières pour répondre aux besoins des scale-ups internationales."
+        },
+        {
+          "title": "Qualité garantie",
+          "description": "Chaque candidat est préqualifié et validé par nos experts techniques avant présentation."
+        }
+      ]
+    }
+  },
+  "faqs": [
+    {
+      "category": "Candidats",
+      "questions": [
+        {
+          "question": "Comment puis-je postuler à une offre d'emploi ?",
+          "answer": "Vous pouvez postuler de deux façons : en créant un compte candidat sur notre plateforme et en postulant directement aux offres qui vous intéressent, ou en déposant une candidature rapide avec votre CV. Dans les deux cas, notre équipe étudiera votre profil et vous contactera si votre profil correspond à nos opportunités."
+        },
+        {
+          "question": "Dois-je payer pour utiliser vos services ?",
+          "answer": "Non, nos services sont entièrement gratuits pour les candidats. Sil Talents Tech est rémunéré par les entreprises qui recrutent, jamais par les candidats."
+        },
+        {
+          "question": "Comment puis-je mettre à jour mon profil ?",
+          "answer": "Une fois connecté à votre compte candidat, vous pouvez accéder à votre tableau de bord et modifier vos informations personnelles, votre CV, vos compétences et vos préférences à tout moment."
+        },
+        {
+          "question": "Combien de temps faut-il pour être contacté après une candidature ?",
+          "answer": "Nous nous efforçons de répondre à toutes les candidatures dans un délai de 5 à 7 jours ouvrés. Si votre profil correspond à une opportunité, notre équipe vous contactera par email ou téléphone."
+        },
+        {
+          "question": "Puis-je postuler à plusieurs offres en même temps ?",
+          "answer": "Oui, vous pouvez postuler à autant d'offres que vous le souhaitez. Chaque candidature est traitée indépendamment et vous pouvez suivre l'état de vos candidatures depuis votre tableau de bord."
+        }
+      ]
+    },
+    {
+      "category": "Entreprises",
+      "questions": [
+        {
+          "question": "Comment fonctionne votre service de recrutement ?",
+          "answer": "Nous analysons vos besoins en recrutement, recherchons et préqualifions les candidats correspondant à vos critères, puis vous présentons les meilleurs profils. Vous choisissez les candidats que vous souhaitez rencontrer et nous organisons les entretiens."
+        },
+        {
+          "question": "Quels types de profils recrutez-vous ?",
+          "answer": "Nous sommes spécialisés dans le recrutement de profils technologiques : développeurs, ingénieurs en cybersécurité, experts en intelligence artificielle, architectes systèmes, consultants IT, et tous les métiers liés aux technologies de l'information."
+        },
+        {
+          "question": "Quel est le délai moyen pour trouver un candidat ?",
+          "answer": "Le délai varie selon le profil recherché et la rareté des compétences. En moyenne, nous présentons les premiers candidats qualifiés sous 7 à 14 jours après la validation de votre besoin."
+        },
+        {
+          "question": "Quelle est votre zone d'intervention ?",
+          "answer": "Nous intervenons principalement en France, mais notre réseau s'étend également à l'international pour répondre aux besoins des entreprises en croissance qui recherchent des talents à l'échelle mondiale."
+        }
+      ]
+    },
+    {
+      "category": "Données et Confidentialité",
+      "questions": [
+        {
+          "question": "Mes données sont-elles sécurisées ?",
+          "answer": "Oui, nous mettons en œuvre des mesures de sécurité avancées pour protéger vos données personnelles. Vos informations sont chiffrées et stockées de manière sécurisée. Consultez notre politique de confidentialité pour plus de détails."
+        },
+        {
+          "question": "Qui a accès à mes données ?",
+          "answer": "Vos données sont accessibles uniquement à notre équipe interne et à nos partenaires CRM (Boom Manager) pour la gestion de vos candidatures. Nous ne vendons jamais vos données à des tiers."
+        },
+        {
+          "question": "Puis-je supprimer mon compte et mes données ?",
+          "answer": "Oui, vous pouvez demander la suppression de votre compte et de vos données à tout moment en nous contactant à contact@sil-talents-tech.com. Nous traiterons votre demande dans les meilleurs délais."
+        }
+      ]
+    },
+    {
+      "category": "Général",
+      "questions": [
+        {
+          "question": "Comment puis-je vous contacter ?",
+          "answer": "Vous pouvez nous contacter par email à contact@sil-talents-tech.com, via notre formulaire de contact sur le site, ou par téléphone. Notre équipe est disponible pour répondre à toutes vos questions."
+        },
+        {
+          "question": "Quelle est votre politique de remboursement ?",
+          "answer": "Nos services sont gratuits pour les candidats. Pour les entreprises, les conditions commerciales sont définies dans le contrat de prestation. Contactez-nous pour plus d'informations."
+        },
+        {
+          "question": "Proposez-vous des services de conseil en recrutement ?",
+          "answer": "Oui, en plus du recrutement, nous proposons des services de conseil en stratégie de recrutement, optimisation des processus de sélection, et accompagnement dans la construction d'équipes technologiques performantes."
+        },
+        {
+          "question": "Où se trouve votre agence ?",
+          "answer": "Notre agence est située à Marrakech, Maroc. Vous pouvez nous contacter par email à contact@sil-talents-tech.com ou Contact@sil-talents.ma, via notre formulaire de contact sur le site, ou par téléphone. Notre équipe est disponible pour répondre à toutes vos questions."
+        },
+        {
+          "question": "Quelle est votre adresse ?",
+          "answer": "Notre agence est située à Marrakech, Maroc. Pour toute question ou demande, vous pouvez nous contacter par email à contact@sil-talents-tech.com ou Contact@sil-talents.ma, via notre formulaire de contact sur le site, ou par téléphone."
+        },
+        {
+          "question": "Qui est Sil Talents Tech ?",
+          "answer": "Sil Talents Tech est un cabinet de recrutement spécialisé en technologies (IT, cybersécurité, IA, réseaux, transformation digitale). Nous accompagnons les entreprises dans leur croissance technologique en leur trouvant les meilleurs talents. Nous sommes spécialisés dans le recrutement de profils technologiques : développeurs, ingénieurs en cybersécurité, experts en intelligence artificielle, architectes systèmes, consultants IT, et tous les métiers liés aux technologies de l'information."
+        },
+        {
+          "question": "Qu'est-ce que Sil Talents Tech ?",
+          "answer": "Sil Talents Tech est un cabinet de recrutement premium spécialisé dans les technologies. Nous proposons des services de recrutement en cybersécurité, intelligence artificielle, réseaux & télécom, et conseil & expertise IT. Notre mission est d'accompagner les entreprises dans leur croissance technologique en leur trouvant les meilleurs talents. Nous intervenons principalement en France, mais notre réseau s'étend également à l'international."
+        }
+      ]
+    }
+  ],
+  "services": [
+    {
+      "nom": "Cybersécurité",
+      "slug": "cybersecurite",
+      "description": "Experts en sécurité informatique, conformité et protection des données.",
+      "heroTitle": "Sécurisez votre organisation avec les meilleurs talents en cybersécurité",
+      "heroDescription": "Sil Talents Tech vous accompagne dans le recrutement de profils cybersécurité hautement qualifiés pour sécuriser vos systèmes, vos données sensibles et vos infrastructures critiques. Nous intervenons de la gouvernance aux opérations (SOC, pentest, incident response) en intégrant vos enjeux réglementaires, business et opérationnels. Notre objectif : renforcer durablement votre posture de sécurité avec des talents adaptés à votre culture et à votre niveau de maturité.",
+      "presentationTitle": "Une approche cybersécurité orientée talents et résilience",
+      "presentationBody": "Nos équipes spécialisées en cybersécurité couvrent l'ensemble de la chaîne de valeur : gouvernance, architecture, opérations, détection, réponse à incident et conformité. Nous parlons le langage de vos équipes techniques et de vos directions métiers pour vous proposer des profils immédiatement opérationnels, capables de renforcer durablement votre posture de sécurité.",
+      "problems": [
+        "Difficulté à identifier des profils cybersécurité certifiés (CISSP, CEH, OSCP, ISO 27001).",
+        "Manque d'experts capables de piloter la conformité (RGPD, NIS2, PCI-DSS) et la gestion des risques.",
+        "Besoin de renforcer les équipes SOC, de détection d'incidents et de réponse à incident 24/7.",
+        "Nouveaux défis liés à la sécurité cloud, au Zero Trust et aux approches DevSecOps."
+      ],
+      "sectors": [
+        "Banque, assurance et services financiers.",
+        "E-commerce, retail et plateformes digitales à forte volumétrie.",
+        "Santé, pharma et structures manipulant des données sensibles.",
+        "Industrie, énergie et opérateurs d'importance vitale (OIV).",
+        "Secteur public, collectivités et institutions."
+      ],
+      "deliverables": [
+        "Architectes sécurité et responsables de la stratégie cybersécurité (CISO, RSSI).",
+        "Analystes SOC, ingénieurs détection et réponse à incident (Blue Team, DFIR).",
+        "Pentesteurs, Red Team et Ethical Hackers spécialisés sur applications, infra et cloud.",
+        "Experts gouvernance, risque & conformité (GRC) et responsables privacy/RGPD.",
+        "Consultants en gestion de crise cyber et continuité d'activité."
+      ],
+      "advantages": [
+        "Accès à un vivier qualifié de talents cybersécurité (profils opérationnels, seniors et direction).",
+        "Compréhension fine des frameworks et référentiels (ISO 27001, NIST, EBIOS, MITRE ATT&CK).",
+        "Processus de sélection rigoureux, orienté compétences techniques et posture sécurité.",
+        "Approche conseil pour aligner vos besoins en sécurité avec vos enjeux business et réglementaires."
+      ]
+    },
+    {
+      "nom": "Intelligence Artificielle",
+      "slug": "intelligence-artificielle",
+      "description": "Talents en ML, Deep Learning, NLP et solutions IA sur mesure.",
+      "heroTitle": "Accélérez vos projets data & IA avec des talents d'exception",
+      "heroDescription": "Nous recrutons des experts en Intelligence Artificielle, Machine Learning et Data Science pour concevoir, industrialiser et scaler vos produits et plateformes data-driven. De la définition des cas d'usage à la mise en production des modèles, nous constituons des équipes capables de créer de la valeur à partir de vos données tout en respectant vos contraintes de qualité, d'éthique et de performance.",
+      "presentationTitle": "De la vision IA à la mise en production, avec les bons profils",
+      "presentationBody": "Sil Talents Tech accompagne les organisations qui souhaitent structurer ou renforcer leurs équipes IA et data. Nous identifions des profils capables de transformer vos données en leviers de performance : conception de modèles, industrialisation, gouvernance de la donnée et accompagnement des utilisateurs. Chaque mission est pensée pour aligner excellence technique et impact business.",
+      "problems": [
+        "Difficulté à attirer des Data Scientists expérimentés capables de comprendre vos enjeux métier.",
+        "Besoin d'équipes MLOps pour fiabiliser le passage en production des modèles IA.",
+        "Recherche de profils R&D en IA pour des projets de pointe (NLP, computer vision, générative AI).",
+        "Manque de gouvernance autour des données, de la qualité et de l'éthique de l'IA."
+      ],
+      "sectors": [
+        "Tech, SaaS et plateformes digitales.",
+        "Automobile, mobilité et véhicules connectés.",
+        "Banque, assurance, fintech et insurtech.",
+        "Retail, e-commerce et logistique.",
+        "Santé, medtech et recherche clinique."
+      ],
+      "deliverables": [
+        "Data Scientists, Machine Learning Engineers et Data Engineers.",
+        "Research Scientists pour projets IA avancés ou collaboratifs (laboratoires, startups deeptech).",
+        "MLOps Engineers et platform engineers pour sécuriser le cycle de vie des modèles.",
+        "AI Product Managers et profils hybrides business/tech pour piloter vos produits IA.",
+        "Experts en NLP, computer vision, recommandation et IA générative."
+      ],
+      "advantages": [
+        "Accès à un réseau de profils IA seniors, PhD et experts issus d'écosystèmes variés (startup, scale-up, grands groupes).",
+        "Maîtrise des principaux écosystèmes techniques (Python, TensorFlow, PyTorch, cloud data).",
+        "Capacité à sourcer des talents rares à l'international.",
+        "Approche orientée ROI : alignement des profils IA avec vos objectifs business et produit."
+      ]
+    },
+    {
+      "nom": "Réseaux & Télécom",
+      "slug": "reseaux-telecom",
+      "description": "Spécialistes infrastructure, cloud, DevOps et télécommunications.",
+      "heroTitle": "Modernisez vos réseaux, télécoms et infrastructures cloud",
+      "heroDescription": "Sil Talents Tech recrute pour vous des experts réseaux, télécoms, cloud et DevOps pour moderniser vos infrastructures et garantir la performance de vos services numériques. Nous vous aidons à bâtir des environnements hautement disponibles, observables et sécurisés, capables de suivre la croissance de votre activité et les nouvelles attentes de vos utilisateurs.",
+      "presentationTitle": "Des infrastructures fiables, scalables et sécurisées",
+      "presentationBody": "Nos spécialistes Réseaux & Télécom accompagnent vos projets de transformation d'infrastructure : modernisation des réseaux, migration vers le cloud, automatisation, observabilité et amélioration continue. Nous vous aidons à constituer des équipes capables de concilier exigences de performance, de disponibilité et de sécurité, dans des environnements souvent hybrides et distribués.",
+      "problems": [
+        "Projets de migration ou d'hybridation vers le cloud (AWS, Azure, GCP) nécessitant des compétences pointues.",
+        "Modernisation d'infrastructures legacy et rationalisation des environnements réseaux complexes.",
+        "Besoin d'équipes DevOps / SRE pour améliorer la fiabilité, l'observabilité et l'automatisation.",
+        "Défis liés au déploiement de la 5G, SD-WAN, NFV et aux nouveaux usages télécoms."
+      ],
+      "sectors": [
+        "Opérateurs télécoms et fournisseurs d'accès.",
+        "Cloud providers, hébergeurs et infogéreurs.",
+        "Industrie, IoT et environnements connectés.",
+        "ESN, intégrateurs et services IT managés."
+      ],
+      "deliverables": [
+        "Architectes cloud et ingénieurs infrastructure (AWS, Azure, GCP).",
+        "Ingénieurs DevOps, SRE et platform engineers.",
+        "Spécialistes réseaux et télécoms (5G, SD-WAN, NFV).",
+        "Experts en automatisation et infrastructure as code (Terraform, Ansible, Kubernetes).",
+        "Consultants en transformation d'infrastructure et migration cloud."
+      ],
+      "advantages": [
+        "Accès à un réseau de profils infrastructure et cloud expérimentés.",
+        "Maîtrise des principales plateformes cloud (AWS, Azure, GCP) et outils DevOps.",
+        "Capacité à accompagner des projets de transformation d'infrastructure complexes.",
+        "Approche orientée performance et disponibilité pour garantir la continuité de service."
+      ]
+    },
+    {
+      "nom": "Conseil & Expertise IT",
+      "slug": "conseil-expertise",
+      "description": "Architectes, consultants et experts pour transformer votre IT.",
+      "heroTitle": "Transformez votre IT avec des architectes et consultants d'exception",
+      "heroDescription": "Sil Talents Tech vous accompagne dans le recrutement de consultants IT et d'architectes systèmes pour transformer votre infrastructure et optimiser vos processus technologiques. Nous vous aidons à constituer des équipes capables de piloter vos projets de transformation digitale, d'optimiser vos systèmes existants et de concevoir des architectures scalables et résilientes.",
+      "presentationTitle": "De l'architecture à la transformation digitale",
+      "presentationBody": "Nos experts en conseil IT maîtrisent l'ensemble des domaines de l'architecture et du conseil : architecture applicative, architecture cloud, transformation digitale, optimisation des processus et gouvernance IT. Nous vous aidons à recruter des profils capables de transformer votre IT en avantage concurrentiel, en alignant technologie, processus et stratégie business.",
+      "problems": [
+        "Besoin d'architectes capables de concevoir des systèmes scalables et résilients.",
+        "Manque d'expertise pour piloter des projets de transformation digitale complexes.",
+        "Recherche de consultants IT expérimentés pour optimiser vos processus et infrastructures.",
+        "Nécessité de renforcer la gouvernance IT et l'alignement stratégique."
+      ],
+      "sectors": [
+        "Grandes entreprises et ETI en transformation digitale.",
+        "Startups et scale-ups en croissance.",
+        "Secteur public et collectivités.",
+        "ESN et sociétés de services numériques."
+      ],
+      "deliverables": [
+        "Architectes solutions et architectes d'entreprise.",
+        "Consultants IT et experts en transformation digitale.",
+        "Architectes cloud et spécialistes en migration.",
+        "Experts en gouvernance IT et optimisation des processus.",
+        "Chefs de projet IT et responsables de programmes de transformation."
+      ],
+      "advantages": [
+        "Accès à un réseau de consultants IT et architectes expérimentés.",
+        "Maîtrise des méthodologies de transformation digitale et d'architecture.",
+        "Capacité à accompagner des projets complexes de bout en bout.",
+        "Approche orientée valeur business et alignement stratégique."
+      ]
+    }
+  ],
+  "ressources": []
+}

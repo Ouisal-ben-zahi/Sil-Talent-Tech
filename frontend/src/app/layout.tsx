@@ -47,6 +47,11 @@ export const metadata: Metadata = {
     // google: 'your-google-verification-code',
     // yandex: 'your-yandex-verification-code',
   },
+  icons: {
+    icon: '/assets/Images/navigateur-logo.png',
+    apple: '/assets/Images/navigateur-logo.png',
+    shortcut: '/assets/Images/navigateur-logo.png',
+  },
 }
 
 export default function RootLayout({
@@ -57,6 +62,11 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        {/* Favicon */}
+        <link rel="icon" type="image/png" href="/assets/Images/navigateur-logo.png" />
+        <link rel="shortcut icon" type="image/png" href="/assets/Images/navigateur-logo.png" />
+        <link rel="apple-touch-icon" href="/assets/Images/navigateur-logo.png" />
+        
         {/* Preconnect pour améliorer les performances */}
         <link rel="preconnect" href={process.env.NEXT_PUBLIC_API_URL || 'http://168.231.82.55:3001'} />
         <link rel="dns-prefetch" href={process.env.NEXT_PUBLIC_API_URL || 'http://168.231.82.55:3001'} />

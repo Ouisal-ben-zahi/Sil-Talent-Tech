@@ -305,5 +305,124 @@ body::-webkit-scrollbar {
   }
 }
 
+/* ============================================
+   AMÉLIORATIONS D'ACCESSIBILITÉ
+   ============================================ */
+
+/* Amélioration de la navigation au clavier */
+*:focus-visible {
+  outline: 2px solid #297BFF;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Amélioration des contrastes pour les liens */
+a:not([class]) {
+  color: #297BFF;
+  text-decoration: underline;
+}
+
+a:not([class]):hover,
+a:not([class]):focus {
+  color: #1f63d6;
+  text-decoration: underline;
+}
+
+/* Amélioration de la visibilité des boutons */
+button:not([class]) {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Amélioration du contraste pour le texte */
+@media (prefers-contrast: high) {
+  * {
+    border-color: currentColor !important;
+  }
+}
+
+/* Réduction des animations pour les utilisateurs qui préfèrent moins de mouvement */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Amélioration de la visibilité pour les éléments interactifs */
+[role="button"],
+button,
+a,
+input,
+select,
+textarea {
+  &:focus-visible {
+    outline: 2px solid #297BFF;
+    outline-offset: 2px;
+  }
+}
+
+/* Amélioration de la lisibilité pour les lecteurs d'écran */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Amélioration du contraste minimum pour le texte */
+/* Ratio de contraste minimum de 4.5:1 pour le texte normal */
+/* Ratio de contraste minimum de 3:1 pour le texte large */
+.text-low-contrast {
+  color: #999999; /* Contraste amélioré depuis #666 */
+}
+
+/* Amélioration de la visibilité des éléments de formulaire */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+  min-height: 44px; /* Taille minimale pour la facilité d'utilisation */
+}
+
+/* Amélioration de la visibilité des messages d'erreur */
+.error-message,
+[role="alert"] {
+  color: #ff4444;
+  font-weight: 500;
+}
+
+/* Amélioration de la visibilité des messages de succès */
+.success-message {
+  color: #00cc66;
+  font-weight: 500;
+}
+
+/* Amélioration de la navigation au clavier pour les menus */
+[role="menu"] {
+  [role="menuitem"]:focus {
+    background-color: rgba(41, 123, 255, 0.2);
+    color: #297BFF;
+  }
+}
+
+/* Amélioration de la visibilité des états actifs */
+[aria-current="page"],
+[aria-selected="true"] {
+  font-weight: 600;
+  color: #297BFF;
+}
+
 
 

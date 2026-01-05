@@ -7,6 +7,7 @@ import { CustomCursor } from '@/components/ui/CustomCursor'
 import { CustomToaster } from '@/components/ui/CustomToaster'
 import { Chatbot } from '@/components/ui/Chatbot'
 import { FloatingButtonsToggle } from '@/components/ui/FloatingButtonsToggle'
+import { SkipLink } from '@/components/ui/SkipLink'
 import { LanguageProvider } from '@/context/LanguageContext'
 import { ChatbotProvider } from '@/context/ChatbotContext'
 import { FloatingButtonsProvider } from '@/context/FloatingButtonsContext'
@@ -20,9 +21,10 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
     <LanguageProvider>
       <ChatbotProvider>
         <FloatingButtonsProvider>
+          <SkipLink />
           <CustomCursor />
           <Header />
-          <main className="min-h-screen">
+          <main id="main-content" className="min-h-screen" role="main">
             {children}
           </main>
           <Footer />

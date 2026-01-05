@@ -247,13 +247,24 @@ const HeaderComponent = () => {
                         e.preventDefault()
                         setIsServicesOpen(!isServicesOpen)
                       }}
-                      className={`transition-all duration-150 font-light text-sm inline-flex items-center gap-1 ${
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault()
+                          setIsServicesOpen(!isServicesOpen)
+                        } else if (e.key === 'Escape') {
+                          setIsServicesOpen(false)
+                        }
+                      }}
+                      aria-expanded={isServicesOpen}
+                      aria-haspopup="true"
+                      aria-controls={`services-menu-${link.href}`}
+                      className={`transition-all duration-150 font-light text-sm inline-flex items-center gap-1 focus:outline-none focus:ring-2 focus:ring-[#297BFF] focus:ring-offset-2 focus:ring-offset-black ${
                         isActive ? 'text-[#297BFF]' : 'text-white hover:text-[#297BFF] hover:-translate-y-0.5'
                       }`}
                       style={{ fontFamily: 'Inter', fontSize: '14px', fontWeight: isActive ? 300 : 200 }}
                     >
                       {link.label}
-                      <ChevronDown className="w-3.5 h-3.5" />
+                      <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-150 ${isServicesOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
                     </button>
                     <AnimatePresence>
                       {isServicesOpen && (
@@ -262,14 +273,23 @@ const HeaderComponent = () => {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 6 }}
                           transition={{ duration: 0.15 }}
+                          id={`services-menu-${link.href}`}
+                          role="menu"
+                          aria-label="Services menu"
                           className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-[#1A1A1A] shadow-xl min-w-[240px] z-50 rounded-none"
                         >
                           {servicesLinks.map((item) => (
-                            <div key={item.href} className="px-4 py-2">
+                            <div key={item.href} className="px-4 py-2" role="none">
                               <Link
                                 href={item.href}
-                                className="block px-4 py-3 bg-[#2A2A2A] cursor-pointer rounded-none transition-all duration-300 hover:bg-[#297BFF]/20 hover:text-[#297BFF] hover:shadow-md hover:scale-[1.02]"
-                                style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '16px', color: '#999999' }}
+                                role="menuitem"
+                                className="block px-4 py-3 bg-[#2A2A2A] cursor-pointer rounded-none transition-all duration-300 hover:bg-[#297BFF]/20 hover:text-[#297BFF] hover:shadow-md hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-[#297BFF] focus:ring-offset-2 focus:ring-offset-[#1A1A1A]"
+                                style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '16px', color: '#E5E5E5' }}
+                                onKeyDown={(e) => {
+                                  if (e.key === 'Escape') {
+                                    setIsServicesOpen(false)
+                                  }
+                                }}
                               >
                                 {item.label}
                               </Link>
@@ -308,8 +328,18 @@ const HeaderComponent = () => {
             >
               <button
                 type="button"
-                className="flex items-center justify-end gap-2 w-[120px] px-3 py-2  text-[#D9D9D9]  hover:shadow-lg transition-all duration-300 cursor-pointer rounded-none"
-                style={{ fontFamily: 'Inter', fontSize: '14px', fontWeight :100 }}
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Escape') {
+                    setIsLangOpen(false)
+                  }
+                }}
+                aria-expanded={isLangOpen}
+                aria-haspopup="true"
+                aria-controls="language-menu"
+                aria-label={`Langue actuelle: ${lang === 'FR' ? 'Français' : 'English'}`}
+                className="flex items-center justify-end gap-2 w-[120px] px-3 py-2 text-[#D9D9D9] hover:shadow-lg transition-all duration-300 cursor-pointer rounded-none focus:outline-none focus:ring-2 focus:ring-[#297BFF] focus:ring-offset-2 focus:ring-offset-black"
+                style={{ fontFamily: 'Inter', fontSize: '14px', fontWeight: 100 }}
               >
                 {(() => {
                   const current = languageOptions.find((l) => l.code === lang)
@@ -325,7 +355,7 @@ const HeaderComponent = () => {
                     />
                   )
                 })()}
-                <ChevronDown className="w-4 h-4 text-[#999999]" />
+                <ChevronDown className={`w-4 h-4 text-[#999999] transition-transform duration-150 ${isLangOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
               </button>
               <AnimatePresence>
                 {isLangOpen && (
@@ -334,18 +364,28 @@ const HeaderComponent = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 6 }}
                     transition={{ duration: 0.15 }}
+                    id="language-menu"
+                    role="menu"
+                    aria-label="Language menu"
                     className="absolute right-0 mt-2 bg-black/90 border border-white/10 shadow-lg rounded-none min-w-[140px] py-2 z-50"
                   >
                     {languageOptions.map((item) => (
                       <button
                         key={item.code}
                         type="button"
+                        role="menuitem"
                         onClick={() => {
                           setLang(item.code)
                           setIsLangOpen(false)
                         }}
-                        className="w-full flex items-center gap-3 px-4 py-2 bg-black/50 text-[#D9D9D9] hover:bg-[#2A2A2A] hover:text-[#297BFF] transition-all duration-150 text-left rounded-none"
-                        style={{ fontFamily: 'Inter', fontSize: '14px', fontWeight :100 }}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Escape') {
+                            setIsLangOpen(false)
+                          }
+                        }}
+                        aria-label={`Changer la langue en ${item.label}`}
+                        className="w-full flex items-center gap-3 px-4 py-2 bg-black/50 text-[#E5E5E5] hover:bg-[#2A2A2A] hover:text-[#297BFF] transition-all duration-150 text-left rounded-none focus:outline-none focus:ring-2 focus:ring-[#297BFF] focus:ring-offset-2 focus:ring-offset-black"
+                        style={{ fontFamily: 'Inter', fontSize: '14px', fontWeight: 100 }}
                       >
                         <Image
                           src={item.image}
@@ -426,14 +466,16 @@ const HeaderComponent = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-white"
+            className="lg:hidden p-2 text-white focus:outline-none focus:ring-2 focus:ring-[#297BFF] focus:ring-offset-2 focus:ring-offset-black rounded"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={isMobileMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6" aria-hidden="true" />
             ) : (
-              <Menu className="w-6 h-6" />
+              <Menu className="w-6 h-6" aria-hidden="true" />
             )}
           </button>
         </div>
@@ -446,6 +488,9 @@ const HeaderComponent = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+            id="mobile-menu"
+            role="navigation"
+            aria-label="Menu mobile"
             className="lg:hidden bg-black/90 border-t border-white/10"
           >
             <div
@@ -466,13 +511,20 @@ const HeaderComponent = () => {
                       <button
                         type="button"
                         onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                        className={`w-full flex items-center justify-between transition-all duration-150 font-light py-2 ${
+                        onKeyDown={(e) => {
+                          if (e.key === 'Escape') {
+                            setIsMobileServicesOpen(false)
+                          }
+                        }}
+                        aria-expanded={isMobileServicesOpen}
+                        aria-controls={`mobile-services-menu-${link.href}`}
+                        className={`w-full flex items-center justify-between transition-all duration-150 font-light py-2 focus:outline-none focus:ring-2 focus:ring-[#297BFF] focus:ring-offset-2 focus:ring-offset-black ${
                           isActive ? 'text-[#297BFF]' : 'text-white hover:text-[#297BFF]'
                         }`}
                         style={{ fontFamily: 'Inter', fontSize: '14px', fontWeight: isActive ? 300 : 200 }}
                       >
                         <span>{link.label}</span>
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isMobileServicesOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
                       </button>
                       <AnimatePresence>
                         {isMobileServicesOpen && (
@@ -481,6 +533,9 @@ const HeaderComponent = () => {
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.15 }}
+                            id={`mobile-services-menu-${link.href}`}
+                            role="menu"
+                            aria-label="Services menu mobile"
                             className="overflow-hidden"
                           >
                             <div className="pt-2 pl-4 space-y-1">
@@ -490,11 +545,17 @@ const HeaderComponent = () => {
                                   <Link
                                     key={serviceLink.href}
                                     href={serviceLink.href}
+                                    role="menuitem"
                                     onClick={() => {
                                       setIsMobileServicesOpen(false)
                                       setIsMobileMenuOpen(false)
                                     }}
-                                    className={`block py-2 text-left transition-all duration-150 rounded-none ${
+                                    onKeyDown={(e) => {
+                                      if (e.key === 'Escape') {
+                                        setIsMobileServicesOpen(false)
+                                      }
+                                    }}
+                                    className={`block py-2 text-left transition-all duration-150 rounded-none focus:outline-none focus:ring-2 focus:ring-[#297BFF] focus:ring-offset-2 focus:ring-offset-black ${
                                       isServiceActive
                                         ? 'bg-[#297BFF]/20 text-[#297BFF]'
                                         : 'text-white hover:text-[#297BFF] hover:bg-white/5'

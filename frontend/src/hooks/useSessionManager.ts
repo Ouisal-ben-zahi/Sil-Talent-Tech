@@ -33,19 +33,14 @@ export function useSessionManager() {
       if (isCleaningUpRef.current) return
       isCleaningUpRef.current = true
 
-      const userType = getUserType()
       clearAuthData()
       
       // Nettoyer les données de suivi des onglets
       localStorage.removeItem('activeTabId')
       localStorage.removeItem('tabHeartbeat')
       
-      // Rediriger vers la page de login appropriée
-      if (userType === 'admin') {
-        router.push('/admin/login')
-      } else if (userType === 'candidate') {
-        router.push('/candidat/login')
-      }
+      // Toujours rediriger vers la page de login candidat si l'utilisateur n'est pas trouvé
+      router.push('/candidat/login')
     }
 
     // Vérifier si l'utilisateur est actuellement authentifié

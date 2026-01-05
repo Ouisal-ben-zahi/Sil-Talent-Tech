@@ -51,17 +51,29 @@ api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-      // Token expiré ou invalide
+      // Token expiré ou invalide, utilisateur non trouvé
       if (typeof window !== 'undefined') {
-        const currentPath = window.location.pathname
         clearAuthData()
         
-        // Rediriger vers la bonne page de login selon le contexte
-        if (currentPath.startsWith('/admin')) {
-          window.location.href = '/admin/login'
-        } else {
-          window.location.href = '/candidat/login'
-        }
+        // Toujours rediriger vers la page de login candidat si l'utilisateur n'est pas trouvé
+        window.location.href = '/candidat/login'
+      }
+    }
+    return Promise.reject(error)
+  },
+)
+
+// Intercepteur pour gérer les erreurs pour les requêtes FormData
+apiFormData.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response?.status === 401) {
+      // Token expiré ou invalide, utilisateur non trouvé
+      if (typeof window !== 'undefined') {
+        clearAuthData()
+        
+        // Toujours rediriger vers la page de login candidat si l'utilisateur n'est pas trouvé
+        window.location.href = '/candidat/login'
       }
     }
     return Promise.reject(error)

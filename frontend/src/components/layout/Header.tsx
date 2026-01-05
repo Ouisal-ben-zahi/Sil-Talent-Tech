@@ -673,31 +673,3 @@ export const Header = memo(HeaderComponent)
 
 
 
-
-                    )}
-                  </div>
-                  <span>{userName || (userType === 'admin' ? 'Admin' : 'Mon compte')}</span>
-                </Link>
-              ) : (
-                <Link
-                  href="/candidat/login"
-                  className="block text-center px-6 py-4 bg-[#297BFF] hover:bg-[#1f63d6] text-white transition-all duration-150 rounded-none min-w-[140px] mx-auto"
-                  style={{ fontFamily: 'Inter', fontSize: '16px', fontWeight: 200 }}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Se connecter
-                </Link>
-              )}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
-  )
-}
-
-// Memoize Header pour éviter les re-renders inutiles
-export const Header = memo(HeaderComponent)
-
-
-

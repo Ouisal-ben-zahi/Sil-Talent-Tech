@@ -26,12 +26,26 @@ import { HCaptchaService } from './hcaptcha.service';
     PassportModule,
     JwtModule.registerAsync({
       imports: [ConfigModule],
-      useFactory: async (configService: ConfigService) => ({
-        secret: configService.get<string>('JWT_SECRET', 'your-secret-key-change-in-production'),
-        signOptions: {
-          expiresIn: configService.get<string>('JWT_EXPIRES_IN', '1h'),
-        },
-      }),
+      useFactory: async (configService: ConfigService) => {
+        const jwtSecret = configService.get<string>('JWT_SECRET');
+        
+        // Sécurité : Refuser de démarrer si JWT_SECRET n'est pas configuré
+        if (!jwtSecret || jwtSecret === 'your-secret-key-change-in-production') {
+          throw new Error(
+            'JWT_SECRET doit être configuré avec une valeur sécurisée. ' +
+            'Générez un secret avec: openssl rand -base64 32'
+          );
+        }
+
+        return {
+          secret: jwtSecret,
+          signOptions: {
+            expiresIn: configService.get<string>('JWT_EXPIRES_IN', '1h'),
+            // Ajouter l'algorithme explicitement pour plus de sécurité
+            algorithm: 'HS256',
+          },
+        };
+      },
       inject: [ConfigService],
     }),
   ],

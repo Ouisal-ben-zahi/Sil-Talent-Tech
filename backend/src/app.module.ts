@@ -29,8 +29,19 @@ import { LoggingMiddleware } from './common/middleware/logging.middleware';
     SupabaseModule,
     ThrottlerModule.forRoot([
       {
+        name: 'short',
         ttl: 60000, // 1 minute
-        limit: 10, // 10 requests per minute
+        limit: 100, // 100 requests per minute (général)
+      },
+      {
+        name: 'auth',
+        ttl: 60000, // 1 minute
+        limit: 5, // 5 tentatives de connexion par minute (sécurité)
+      },
+      {
+        name: 'strict',
+        ttl: 60000, // 1 minute
+        limit: 20, // 20 requests per minute (endpoints sensibles)
       },
     ]),
     AuthModule,

@@ -57,9 +57,32 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Preconnect pour améliorer les performances */}
+        <link rel="preconnect" href={process.env.NEXT_PUBLIC_API_URL || 'http://168.231.82.55:3001'} />
         <link rel="dns-prefetch" href={process.env.NEXT_PUBLIC_API_URL || 'http://168.231.82.55:3001'} />
+        
+        {/* Preload des fonts critiques uniquement (Regular et Medium pour la plupart du contenu) */}
+        <link
+          rel="preload"
+          href="/fonts/Inter-Regular.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/Inter-Medium.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/Inter-SemiBold.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
+        />
       </head>
       <body style={{ fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" }}>
         <ClientLayout>{children}</ClientLayout>

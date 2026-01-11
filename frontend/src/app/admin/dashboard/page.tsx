@@ -416,7 +416,7 @@ export default function AdminDashboardPage() {
 
   const handleDownloadCv = async (fileName: string) => {
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://168.231.82.55:3001/api'
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://sil-talents.ma/api'
       const token = localStorage.getItem('accessToken')
       
       const response = await fetch(`${apiUrl}/admin/cvs/${encodeURIComponent(fileName)}/download`, {

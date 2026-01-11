@@ -249,7 +249,7 @@ function LoginForm() {
       }
     }
     
-    let apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://168.231.82.55:3001/api'
+    let apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://sil-talents.ma/api'
     
     if (!apiUrl.endsWith('/api')) {
       apiUrl = apiUrl.endsWith('/') ? `${apiUrl}api` : `${apiUrl}/api`

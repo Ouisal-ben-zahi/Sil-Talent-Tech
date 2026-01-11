@@ -2,7 +2,7 @@ import axios from 'axios'
 import { getValidToken, clearAuthData } from './auth'
 
 // S'assurer que l'URL se termine par /api
-const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://168.231.82.55:3001/api'
+const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://sil-talents.ma/api'
 const API_URL = baseUrl.endsWith('/api') ? baseUrl : `${baseUrl}/api`
 
 export const api = axios.create({

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // S'assurer que l'URL ne se termine pas par /api pour éviter le double /api/api/
-const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://168.231.82.55:3001';
+const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://sil-talents.ma';
 const API_URL = baseUrl.endsWith('/api') ? baseUrl.replace(/\/api$/, '') : baseUrl;
 
 export interface Category {

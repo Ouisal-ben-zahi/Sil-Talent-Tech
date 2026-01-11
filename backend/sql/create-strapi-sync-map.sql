@@ -44,3 +44,4 @@ CREATE POLICY "Allow public read access on strapi_sync_map" ON strapi_sync_map
 
 
 
+

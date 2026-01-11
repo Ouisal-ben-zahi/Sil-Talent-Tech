@@ -938,7 +938,7 @@ export default function DashboardPage() {
     // Extraire le nom du fichier depuis le chemin
     const fileName = cvPath.split('/').pop() || cvPath
     // Télécharger ou afficher le CV
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://168.231.82.55:3001/api'
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://sil-talents.ma/api'
     const cvUrl = `${apiUrl}/admin/cvs/${encodeURIComponent(fileName)}/download`
     window.open(cvUrl, '_blank')
   }

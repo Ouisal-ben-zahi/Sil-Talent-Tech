@@ -68,8 +68,8 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/assets/Images/navigateur-logo.png" />
         
         {/* Preconnect pour améliorer les performances */}
-        <link rel="preconnect" href={process.env.NEXT_PUBLIC_API_URL || 'http://168.231.82.55:3001'} />
-        <link rel="dns-prefetch" href={process.env.NEXT_PUBLIC_API_URL || 'http://168.231.82.55:3001'} />
+        <link rel="preconnect" href={process.env.NEXT_PUBLIC_API_URL || '/api'} />
+        <link rel="dns-prefetch" href={process.env.NEXT_PUBLIC_API_URL || '/api'} />
         
         {/* Preload des fonts critiques uniquement (Regular et Medium pour la plupart du contenu) */}
         <link

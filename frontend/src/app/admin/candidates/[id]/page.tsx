@@ -53,7 +53,7 @@ export default function CandidateDetailPage() {
   }
 
   const handleDownloadCv = (fileName: string) => {
-    window.open(`${process.env.NEXT_PUBLIC_API_URL || 'http://168.231.82.55:3001/api'}/admin/cvs/${fileName}/download`, '_blank')
+    window.open(`${process.env.NEXT_PUBLIC_API_URL || 'https://sil-talents.ma/api'}/admin/cvs/${fileName}/download`, '_blank')
   }
 
   const handleRetrySync = async (cvHistoryId: string) => {

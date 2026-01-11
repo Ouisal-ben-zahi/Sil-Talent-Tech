@@ -101,7 +101,7 @@ export default function ResourcesPage() {
 
   const handleDownload = async (resource: Resource) => {
     try {
-      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://sil-talents.ma'
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://sil-talentms.ma'
       const apiUrl = baseUrl.endsWith('/api') ? baseUrl.replace(/\/api$/, '') : baseUrl
       const downloadUrl = `${apiUrl}/api/cms/resources/${resource.id}/download`
       
